@@ -71,3 +71,11 @@ void getEmployeeData(int empID[], int hours[], double payRate[], int AMNT) // Fu
 	}
 
 }
+
+void calcPay(int empID[], int hours[], double payRate[], double wages[], int AMNT) // Calulcating Pay
+{
+	for (int i = 0; i < AMNT; i++)
+	{
+		wages[i] = hours[i] * payRate[i];
+	}
+}
