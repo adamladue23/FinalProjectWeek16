@@ -46,3 +46,28 @@ int main()
 	system("pause");
 	return 0;
 }
+
+void getEmployeeData(int empID[], int hours[], double payRate[], int AMNT) // Function getEmployeeData
+{
+	for (int i = 0; i < AMNT; i++)
+	{
+		cout << "Enter hours for Employee # " << empID[i] << ": ";
+		cin >> hours[i];
+		while (hours[i] <= 0)//Validating input for hours
+		{
+			cout << "Hours can't be negative!!\n"
+				<< "Enter hours for Employee # " << empID[i] << ": ";
+			cin >> hours[i];
+		}
+		cout << "Enter pay rate for Employee # " << empID[i] << ": $";
+		cin >> payRate[i];
+		while (payRate[i] < 20.00)//Validating input for pay rate
+		{
+			cout << "Nobody makes less than $20.00!!\n"
+				<< "Enter pay rate for Employee # " << empID[i] << ": $";
+			cin >> payRate[i];
+		}
+		cout << "\n";
+	}
+
+}
